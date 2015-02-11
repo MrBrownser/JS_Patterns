@@ -1,15 +1,17 @@
-var Tinder = window.Tinder || {};
+var TinderClass = function(){};
+var Tinder = window.Tinder || new TinderClass();
 
-Tinder.prototype.query = function(selector) {
-	Tinder.query_response = document.querySelector(selector);
+TinderClass.prototype.element;
+
+TinderClass.prototype.query = function(selector) {
+	this.element = document.querySelector(selector);
 	return this;
 };
 
-Tinder.prototype.on = function(element, event, callback) {
-	//Tinder.query_response.addEventListener(event, callback);
-	element.addEventListener(event, callback);
+TinderClass.prototype.on = function(event, callback) {
+	this.element.addEventListener(event, callback);
 	return this;
-}
+};
 
 // Query Selector Function
 // Tinder.query = function(selector) {
@@ -20,3 +22,20 @@ Tinder.prototype.on = function(element, event, callback) {
 // Tinder.on = function(element, event, callback) {
 //   element.addEventListener(event, callback);
 // };
+
+// var MyQuery = function() {
+//   this.element;
+//   this.query = function() {
+//     // do something
+//     return this;
+//   }
+//   this.on = function() {
+//     // do something
+//     return this;
+//   }
+// }
+
+// $.query("").on("click", callback);
+
+// var button = $.query();
+// button.on();

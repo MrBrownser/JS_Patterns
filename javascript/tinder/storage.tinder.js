@@ -1,5 +1,13 @@
 var Tinder = window.Tinder || {};
 
+var SingletonStorer = (function(){
+	function Singleton(args) {
+		var args = args || {};
+		this.name
+	}
+})
+
+
 if(!window.localStorage) throw new Error("Local Storage API not available.");
 
 Tinder.save = function(key, value) {

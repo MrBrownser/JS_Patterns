@@ -9,3 +9,8 @@ var MyQuery = function() {
     return this;
   }
 }
+
+$.query("").on("click", callback);
+
+var button = $.query();
+button.on();
