@@ -10,7 +10,8 @@ var mapURL;
 var address;
 
 // use query.tinder.js
-var button1 = $.query("#getGeolocation");
+var button1 = $.query("#getGeolocation").query_response;
+debugger;
 var button2 = $.query("#getAddress");
 var button3 = $.query("#saveData");
 var button4 = $.query("#showNotification");

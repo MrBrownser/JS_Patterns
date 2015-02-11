@@ -13,3 +13,29 @@ Tinder.get = function(key) {
 Tinder.remove = function(key) {
   window.localStorage.removeItem(key);
 };
+
+// var SingletonTester = (function(){
+//     function Singleton(args) {
+//         var args = args || {};
+//         //set the name parameter
+//         this.name = 'SingletonTester';
+//         this.pointX = args.pointX || 6;
+//     }
+
+//     var instance;  //this is our instance holder
+//     //this is an emulation of static variables and methods
+//     var _static = {
+//         name: 'SingletonTester',
+//         getInstance: function (args) {
+//             if (instance === undefined) {
+//                 instance = new Singleton(args);
+//             }
+//             return instance;
+//         }
+//     };
+
+//     return _static;
+// })();
+
+// var singletonTest = SingletonTester.getInstance({pointX: 5});
+// console.log(singletonTest.pointX); // outputs 5
